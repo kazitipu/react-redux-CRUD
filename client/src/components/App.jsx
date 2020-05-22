@@ -5,18 +5,19 @@ import RetrieveStream from "./streams/RetrieveStream";
 import UpdateStream from "./streams/UpdateStream";
 import DeleteStream from "./streams/DeleteStream";
 import StreamList from "./streams/StreamList";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "../history";
 
 const App = () => (
   <div className="container">
-    <BrowserRouter>
+    <Router history={history}>
       <Headers />
       <Route path={"/streams/new"} exact component={CreateStream} />
-      <Route path={"/streams/show"} exact component={RetrieveStream} />
-      <Route path={"/streams/edit"} exact component={UpdateStream} />
-      <Route path={"/streams/delete"} exact component={DeleteStream} />
+      <Route path={"/streams/show/:id"} exact component={RetrieveStream} />
+      <Route path={"/streams/edit/:id"} exact component={UpdateStream} />
+      <Route path={"/streams/delete/:id"} exact component={DeleteStream} />
       <Route path={"/"} exact component={StreamList} />
-    </BrowserRouter>
+    </Router>
   </div>
 );
 

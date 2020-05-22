@@ -12,7 +12,7 @@ const Headers = () => {
         </Link>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link className="nav-item nav-link active" to="/streams/show">
+            <Link className="nav-item nav-link active" to="/">
               Home <span className="sr-only">(current)</span>
             </Link>
             <Link className="nav-item nav-link active" to="/">

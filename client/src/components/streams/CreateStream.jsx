@@ -1,9 +1,12 @@
 import React from "react";
 import { reduxForm, Field } from "redux-form";
+import { connect } from "react-redux";
+import { createStream } from "../../actions";
 
 class CreateStream extends React.Component {
   onSubmit = (formValues) => {
-    console.log(formValues);
+    const formValuesWithUser = { ...formValues, userId: this.props.userId };
+    this.props.createStream(formValuesWithUser);
   };
   renderError = ({ touched, error }) => {
     if (touched && error) {
@@ -62,4 +65,11 @@ const validate = (formValues) => {
   }
   return errors;
 };
-export default reduxForm({ form: "Streams", validate })(CreateStream);
+const mapStateToProps = (state) => {
+  return {
+    userId: state.auth.userId,
+  };
+};
+export default connect(mapStateToProps, { createStream })(
+  reduxForm({ form: "Streams", validate })(CreateStream)
+);

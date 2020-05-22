@@ -1,0 +1,31 @@
+{
+  "streams": [
+    {
+      "title": "new stream for practice",
+      "description": "new stream for practice",
+      "id": 20
+    },
+    {
+      "title": "new one",
+      "description": "new one",
+      "id": 21
+    },
+    {
+      "title": "new stream 2",
+      "description": "new stream 2 for testing",
+      "id": 22
+    },
+    {
+      "title": "adding my stream",
+      "description": "adding my stream",
+      "userId": "111161313312923805988",
+      "id": 23
+    },
+    {
+      "title": "another stream with my id",
+      "description": "another stream with my id",
+      "userId": "111161313312923805988",
+      "id": 24
+    }
+  ]
+}
